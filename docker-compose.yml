@@ -1,14 +1,12 @@
 services:
 
   zookeeper:
-    image: wurstmeister/zookeeper
+    image: 381841683508.dkr.ecr.eu-west-1.amazonaws.com/bse-zookeeper:1
     ports:
       - "2181:2181"
-    networks:
-      - spring-network  
 
   kafka:
-    image: wurstmeister/kafka
+    image: 381841683508.dkr.ecr.eu-west-1.amazonaws.com/bse-kafka:2.6.0
     depends_on:
       - zookeeper
     ports:
@@ -18,28 +16,6 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
       KAFKA_CREATE_TOPICS: ConfigurationUpdated:1:1
-    networks:
-      - spring-network  
-  config-client:
-    build:
-      context: ./cloud-bus-config-server-client-kafka
-    container_name: config-client
-    depends_on:
-      - config-server
-      - kafka
-    ports:
-      - "8080:8080"
-    links:
-      - kafka
-
-  config-server:
-    build:
-      context: ./cloud-bus-config-server-kafka
-    container_name: config-server
-    ports:
-      - "8081:8081"
-    links:
-      - kafka
 
   wiremock:
     image: 381841683508.dkr.ecr.eu-west-1.amazonaws.com/bse-wiremock:2.33.2-alpine
@@ -49,9 +25,3 @@ services:
       - ./config/wiremock/:/wiremock/
     command:
       --verbose --global-response-templating --root-dir /wiremock
-    networks:
-      - spring-network  
-
-networks:
-  spring-network:
-    driver: bridge
