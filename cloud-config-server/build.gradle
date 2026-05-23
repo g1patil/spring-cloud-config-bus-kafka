@@ -26,6 +26,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
 	implementation 'org.springframework.cloud:spring-cloud-config-monitor'
+	implementation 'org.springframework.vault:spring-vault-core'
 	implementation("org.springframework.boot:spring-boot-starter-actuator:3.5.3")
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.cloud:spring-cloud-stream-test-binder'
