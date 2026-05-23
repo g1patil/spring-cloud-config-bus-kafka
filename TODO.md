@@ -13,6 +13,11 @@
   - `secret/data/application` — shared: `db.password`, `api.key`, `smtp.password`
   - `secret/data/cloud-config-client` — client-specific: `jwt.secret`, `external.service.api.key`, `feature.flag.enabled`
 - Verified config server serves secrets from Vault when started with `--spring.profiles.active=vault`
+- Added Vault Agent sidecar (`vault-agent/`) to docker-compose:
+  - Watches `secret/data/application` → fires `POST /actuator/busrefresh` (all apps)
+  - Watches `secret/data/cloud-config-client` → fires `POST /actuator/busrefresh/cloud-config-client:**` (targeted)
+  - Token auth via `VAULT_TOKEN` env var, written to token file at container startup
+  - Verified `RefreshRemoteApplicationEvent` broadcast over Kafka on secret change
 
 ### Next Steps
 - [ ] Step 3: Activate vault profile — decide between `spring.profiles.active` in properties, startup arg, or docker-compose env var
