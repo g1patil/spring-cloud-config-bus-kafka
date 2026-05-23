@@ -23,6 +23,13 @@ template {
   command     = "wget -qO- --post-data='' --header='Content-Type: application/json' http://host.docker.internal:8081/actuator/busrefresh || true"
 }
 
+# Watches payment-service secrets -> refreshes only that app
+template {
+  source      = "/vault-agent/templates/payment-service.tpl"
+  destination = "/tmp/payment-service.txt"
+  command     = "wget -qO- --post-data='' --header='Content-Type: application/json' 'http://host.docker.internal:8081/actuator/busrefresh/payment-service:**' || true"
+}
+
 # Watches cloud-config-client secrets -> refreshes only that app
 template {
   source      = "/vault-agent/templates/cloud-config-client.tpl"
