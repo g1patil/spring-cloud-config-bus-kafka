@@ -1,0 +1,789 @@
+config-client-1  |   .   ____          _            __ _ _
+config-client-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+config-client-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+config-client-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+config-client-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+config-client-1  |  =========|_|==============|___/=/_/_/_/
+config-client-1  |  
+config-client-1  |  :: Spring Boot ::   v3.5.3
+config-client-1  |  :: Spring Cloud Stream ::   v
+config-client-1  |  :: Spring Cloud Function ::   v
+config-client-1  | 2025-07-12T09:19:53.574Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] oudBusConfigServerClientKafkaApplication : Starting CloudBusConfigServerClientKafkaApplication v0.0.1-SNAPSHOT using Java 24 with PID 1 (/cloud-config-client.jar started by root in /)
+config-client-1  | 2025-07-12T09:19:53.576Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] oudBusConfigServerClientKafkaApplication : The following 1 profile is active: "docker"
+config-client-1  | 2025-07-12T09:19:54.608Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+config-client-1  | 2025-07-12T09:19:54.612Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+config-client-1  | 2025-07-12T09:19:54.641Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=66903b13-bfc1-3008-9b25-a8a85e5acd6a
+config-client-1  | 2025-07-12T09:19:54.920Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+config-client-1  | 2025-07-12T09:19:54.931Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+config-client-1  | 2025-07-12T09:19:54.932Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+config-client-1  | 2025-07-12T09:19:54.955Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+config-client-1  | 2025-07-12T09:19:54.956Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1333 ms
+config-client-1  | 2025-07-12T09:19:56.054Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [           main] c.f.c.c.BeanFactoryAwareFunctionRegistry : Failed to locate function 'busConsumer' for function definition 'busConsumer'. Returning null.
+config-client-1  | 2025-07-12T09:19:56.104Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'cloud-bus-config-server-client-kafka.springCloudBusInput' has 1 subscriber(s).
+config-client-1  | 2025-07-12T09:19:56.250Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+config-client-1  | 2025-07-12T09:19:56.250Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'cloud-bus-config-server-client-kafka.errorChannel' has 1 subscriber(s).
+config-client-1  | 2025-07-12T09:19:56.250Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+config-client-1  | 2025-07-12T09:19:56.251Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: kafka
+config-client-1  | 2025-07-12T09:19:56.251Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for kafka
+config-client-1  | 2025-07-12T09:19:56.416Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: kafka
+config-client-1  | 2025-07-12T09:19:56.438Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+config-client-1  | 	auto.include.jmx.reporter = true
+config-client-1  | 	bootstrap.controllers = []
+config-client-1  | 	bootstrap.servers = [localhost:9092]
+config-client-1  | 	client.dns.lookup = use_all_dns_ips
+config-client-1  | 	client.id = 
+config-client-1  | 	connections.max.idle.ms = 300000
+config-client-1  | 	default.api.timeout.ms = 60000
+config-client-1  | 	enable.metrics.push = true
+config-client-1  | 	metadata.max.age.ms = 300000
+config-client-1  | 	metadata.recovery.strategy = none
+config-client-1  | 	metric.reporters = []
+config-client-1  | 	metrics.num.samples = 2
+config-client-1  | 	metrics.recording.level = INFO
+config-client-1  | 	metrics.sample.window.ms = 30000
+config-client-1  | 	receive.buffer.bytes = 65536
+config-client-1  | 	reconnect.backoff.max.ms = 1000
+config-client-1  | 	reconnect.backoff.ms = 50
+config-client-1  | 	request.timeout.ms = 30000
+config-client-1  | 	retries = 2147483647
+config-client-1  | 	retry.backoff.max.ms = 1000
+config-client-1  | 	retry.backoff.ms = 100
+config-client-1  | 	sasl.client.callback.handler.class = null
+config-client-1  | 	sasl.jaas.config = null
+config-client-1  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+config-client-1  | 	sasl.kerberos.min.time.before.relogin = 60000
+config-client-1  | 	sasl.kerberos.service.name = null
+config-client-1  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+config-client-1  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+config-client-1  | 	sasl.login.callback.handler.class = null
+config-client-1  | 	sasl.login.class = null
+config-client-1  | 	sasl.login.connect.timeout.ms = null
+config-client-1  | 	sasl.login.read.timeout.ms = null
+config-client-1  | 	sasl.login.refresh.buffer.seconds = 300
+config-client-1  | 	sasl.login.refresh.min.period.seconds = 60
+config-client-1  | 	sasl.login.refresh.window.factor = 0.8
+config-client-1  | 	sasl.login.refresh.window.jitter = 0.05
+config-client-1  | 	sasl.login.retry.backoff.max.ms = 10000
+config-client-1  | 	sasl.login.retry.backoff.ms = 100
+config-client-1  | 	sasl.mechanism = GSSAPI
+config-client-1  | 	sasl.oauthbearer.clock.skew.seconds = 30
+config-client-1  | 	sasl.oauthbearer.expected.audience = null
+config-client-1  | 	sasl.oauthbearer.expected.issuer = null
+config-client-1  | 	sasl.oauthbearer.header.urlencode = false
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.url = null
+config-client-1  | 	sasl.oauthbearer.scope.claim.name = scope
+config-client-1  | 	sasl.oauthbearer.sub.claim.name = sub
+config-client-1  | 	sasl.oauthbearer.token.endpoint.url = null
+config-client-1  | 	security.protocol = PLAINTEXT
+config-client-1  | 	security.providers = null
+config-client-1  | 	send.buffer.bytes = 131072
+config-client-1  | 	socket.connection.setup.timeout.max.ms = 30000
+config-client-1  | 	socket.connection.setup.timeout.ms = 10000
+config-client-1  | 	ssl.cipher.suites = null
+config-client-1  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+config-client-1  | 	ssl.endpoint.identification.algorithm = https
+config-client-1  | 	ssl.engine.factory.class = null
+config-client-1  | 	ssl.key.password = null
+config-client-1  | 	ssl.keymanager.algorithm = SunX509
+config-client-1  | 	ssl.keystore.certificate.chain = null
+config-client-1  | 	ssl.keystore.key = null
+config-client-1  | 	ssl.keystore.location = null
+config-client-1  | 	ssl.keystore.password = null
+config-client-1  | 	ssl.keystore.type = JKS
+config-client-1  | 	ssl.protocol = TLSv1.3
+config-client-1  | 	ssl.provider = null
+config-client-1  | 	ssl.secure.random.implementation = null
+config-client-1  | 	ssl.trustmanager.algorithm = PKIX
+config-client-1  | 	ssl.truststore.certificates = null
+config-client-1  | 	ssl.truststore.location = null
+config-client-1  | 	ssl.truststore.password = null
+config-client-1  | 	ssl.truststore.type = JKS
+config-client-1  | 
+config-client-1  | 2025-07-12T09:19:56.586Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+config-client-1  | 2025-07-12T09:19:56.587Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+config-client-1  | 2025-07-12T09:19:56.587Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752311996585
+config-client-1  | 2025-07-12T09:19:56.607Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:19:56.609Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:19:56.712Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:19:56.712Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:19:56.814Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:19:56.814Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:19:57.119Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:19:57.119Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:19:57.526Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:19:57.527Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:19:58.336Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:19:58.337Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:19:59.355Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:19:59.356Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:00.374Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:00.375Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:01.308Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:01.309Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:02.337Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:02.337Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:03.356Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:03.357Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:04.372Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:04.373Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:05.398Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:05.398Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:06.432Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:06.433Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:07.467Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:07.468Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:08.497Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:08.497Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:09.427Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:09.427Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:10.459Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:10.460Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:11.493Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:11.494Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:12.526Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:12.527Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:13.555Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:13.555Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:14.588Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:14.588Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:15.618Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:15.618Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:16.544Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:16.544Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:17.576Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:17.577Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:18.613Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:18.614Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:19.541Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:19.542Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:20.475Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:20.475Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:21.506Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:21.506Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:22.539Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:22.545Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:23.580Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:23.581Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:24.607Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:24.607Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:25.627Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:25.627Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:26.596Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+config-client-1  | 
+config-client-1  | org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+config-client-1  | 
+config-client-1  | 2025-07-12T09:20:26.723Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:26.723Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:27.758Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:27.758Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:28.597Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:28.597Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:29.624Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:29.624Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:30.668Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:30.670Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:31.598Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:31.598Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:32.627Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:32.628Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:33.562Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:33.563Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:34.598Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:34.599Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:35.629Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:35.629Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:36.657Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:36.658Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:37.692Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:37.693Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:38.732Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:38.733Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:39.766Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:39.766Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:40.788Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:40.788Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:41.825Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:41.828Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:42.855Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:42.855Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:43.785Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:43.786Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:44.729Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:44.729Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:45.661Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:45.662Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:46.713Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:46.715Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:47.644Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:47.645Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:48.584Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:48.584Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:49.617Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:49.618Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:50.443Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:50.444Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:51.478Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:51.479Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:52.508Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:52.508Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:53.540Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:53.542Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:54.567Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:54.567Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:55.604Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:20:55.605Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-1] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:20:56.604Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+config-client-1  | 2025-07-12T09:20:56.604Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-1] Metadata update failed
+config-client-1  | 
+config-client-1  | org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+config-client-1  | 
+config-client-1  | 2025-07-12T09:20:56.605Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+config-client-1  | 2025-07-12T09:20:56.611Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+config-client-1  | 2025-07-12T09:20:56.612Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+config-client-1  | 2025-07-12T09:20:56.612Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+config-client-1  | 2025-07-12T09:20:56.614Z ERROR 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.cloud.stream.binding.BindingService  : Failed to create consumer binding; retrying in 30 seconds
+config-client-1  | 
+config-client-1  | org.springframework.cloud.stream.provisioning.ProvisioningException: Provisioning exception encountered for ConfigurationUpdated
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopic(KafkaTopicProvisioner.java:419) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.doProvisionConsumerDestination(KafkaTopicProvisioner.java:288) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.provisionConsumerDestination(KafkaTopicProvisioner.java:253) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.provisionConsumerDestination(KafkaTopicProvisioner.java:98) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder.doBindConsumer(AbstractMessageChannelBinder.java:537) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder.doBindConsumer(AbstractMessageChannelBinder.java:103) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractBinder.bindConsumer(AbstractBinder.java:144) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binding.BindingService.doBindConsumer(BindingService.java:188) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binding.BindingService.bindConsumer(BindingService.java:141) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binding.AbstractBindableProxyFactory.createAndBindInputs(AbstractBindableProxyFactory.java:99) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binding.InputBindingLifecycle.doStartWithBindable(InputBindingLifecycle.java:59) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:834) ~[na:na]
+config-client-1  | 	at org.springframework.cloud.stream.binding.AbstractBindingLifecycle.start(AbstractBindingLifecycle.java:60) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:405) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:394) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:586) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+config-client-1  | 	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:364) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:310) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:1006) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:630) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.3.jar!/:3.5.3]
+config-client-1  | 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.3.jar!/:3.5.3]
+config-client-1  | 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.3.jar!/:3.5.3]
+config-client-1  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.3.jar!/:3.5.3]
+config-client-1  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar!/:3.5.3]
+config-client-1  | 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar!/:3.5.3]
+config-client-1  | 	at com.spring.cloud_bus_config_server_client_kafka.CloudBusConfigServerClientKafkaApplication.main(CloudBusConfigServerClientKafkaApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+config-client-1  | 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+config-client-1  | 	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+config-client-1  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102) ~[cloud-config-client.jar:0.0.1-SNAPSHOT]
+config-client-1  | 	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64) ~[cloud-config-client.jar:0.0.1-SNAPSHOT]
+config-client-1  | 	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40) ~[cloud-config-client.jar:0.0.1-SNAPSHOT]
+config-client-1  | Caused by: java.util.concurrent.TimeoutException: null
+config-client-1  | 	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:2006) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2141) ~[na:na]
+config-client-1  | 	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:183) ~[kafka-clients-3.9.1.jar!/:na]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopicAndPartitions(KafkaTopicProvisioner.java:455) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopicIfNecessary(KafkaTopicProvisioner.java:429) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopic(KafkaTopicProvisioner.java:406) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	... 32 common frames omitted
+config-client-1  | 
+config-client-1  | 2025-07-12T09:20:56.647Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+config-client-1  | 2025-07-12T09:20:56.667Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [           main] oudBusConfigServerClientKafkaApplication : Started CloudBusConfigServerClientKafkaApplication in 63.579 seconds (process running for 64.483)
+config-client-1  | 2025-07-12T09:21:26.634Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+config-client-1  | 	auto.include.jmx.reporter = true
+config-client-1  | 	bootstrap.controllers = []
+config-client-1  | 	bootstrap.servers = [localhost:9092]
+config-client-1  | 	client.dns.lookup = use_all_dns_ips
+config-client-1  | 	client.id = 
+config-client-1  | 	connections.max.idle.ms = 300000
+config-client-1  | 	default.api.timeout.ms = 60000
+config-client-1  | 	enable.metrics.push = true
+config-client-1  | 	metadata.max.age.ms = 300000
+config-client-1  | 	metadata.recovery.strategy = none
+config-client-1  | 	metric.reporters = []
+config-client-1  | 	metrics.num.samples = 2
+config-client-1  | 	metrics.recording.level = INFO
+config-client-1  | 	metrics.sample.window.ms = 30000
+config-client-1  | 	receive.buffer.bytes = 65536
+config-client-1  | 	reconnect.backoff.max.ms = 1000
+config-client-1  | 	reconnect.backoff.ms = 50
+config-client-1  | 	request.timeout.ms = 30000
+config-client-1  | 	retries = 2147483647
+config-client-1  | 	retry.backoff.max.ms = 1000
+config-client-1  | 	retry.backoff.ms = 100
+config-client-1  | 	sasl.client.callback.handler.class = null
+config-client-1  | 	sasl.jaas.config = null
+config-client-1  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+config-client-1  | 	sasl.kerberos.min.time.before.relogin = 60000
+config-client-1  | 	sasl.kerberos.service.name = null
+config-client-1  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+config-client-1  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+config-client-1  | 	sasl.login.callback.handler.class = null
+config-client-1  | 	sasl.login.class = null
+config-client-1  | 	sasl.login.connect.timeout.ms = null
+config-client-1  | 	sasl.login.read.timeout.ms = null
+config-client-1  | 	sasl.login.refresh.buffer.seconds = 300
+config-client-1  | 	sasl.login.refresh.min.period.seconds = 60
+config-client-1  | 	sasl.login.refresh.window.factor = 0.8
+config-client-1  | 	sasl.login.refresh.window.jitter = 0.05
+config-client-1  | 	sasl.login.retry.backoff.max.ms = 10000
+config-client-1  | 	sasl.login.retry.backoff.ms = 100
+config-client-1  | 	sasl.mechanism = GSSAPI
+config-client-1  | 	sasl.oauthbearer.clock.skew.seconds = 30
+config-client-1  | 	sasl.oauthbearer.expected.audience = null
+config-client-1  | 	sasl.oauthbearer.expected.issuer = null
+config-client-1  | 	sasl.oauthbearer.header.urlencode = false
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.url = null
+config-client-1  | 	sasl.oauthbearer.scope.claim.name = scope
+config-client-1  | 	sasl.oauthbearer.sub.claim.name = sub
+config-client-1  | 	sasl.oauthbearer.token.endpoint.url = null
+config-client-1  | 	security.protocol = PLAINTEXT
+config-client-1  | 	security.providers = null
+config-client-1  | 	send.buffer.bytes = 131072
+config-client-1  | 	socket.connection.setup.timeout.max.ms = 30000
+config-client-1  | 	socket.connection.setup.timeout.ms = 10000
+config-client-1  | 	ssl.cipher.suites = null
+config-client-1  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+config-client-1  | 	ssl.endpoint.identification.algorithm = https
+config-client-1  | 	ssl.engine.factory.class = null
+config-client-1  | 	ssl.key.password = null
+config-client-1  | 	ssl.keymanager.algorithm = SunX509
+config-client-1  | 	ssl.keystore.certificate.chain = null
+config-client-1  | 	ssl.keystore.key = null
+config-client-1  | 	ssl.keystore.location = null
+config-client-1  | 	ssl.keystore.password = null
+config-client-1  | 	ssl.keystore.type = JKS
+config-client-1  | 	ssl.protocol = TLSv1.3
+config-client-1  | 	ssl.provider = null
+config-client-1  | 	ssl.secure.random.implementation = null
+config-client-1  | 	ssl.trustmanager.algorithm = PKIX
+config-client-1  | 	ssl.truststore.certificates = null
+config-client-1  | 	ssl.truststore.location = null
+config-client-1  | 	ssl.truststore.password = null
+config-client-1  | 	ssl.truststore.type = JKS
+config-client-1  | 
+config-client-1  | 2025-07-12T09:21:26.649Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+config-client-1  | 2025-07-12T09:21:26.649Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+config-client-1  | 2025-07-12T09:21:26.649Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752312086649
+config-client-1  | 2025-07-12T09:21:26.652Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:26.653Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:26.757Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:26.757Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:26.961Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:26.961Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:27.164Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:27.164Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:27.577Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:27.577Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:28.511Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:28.511Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:29.540Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:29.540Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:30.576Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:30.577Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:31.509Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:31.509Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:32.535Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:32.535Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:33.555Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:33.556Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:34.577Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:34.578Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:35.412Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:35.412Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:36.448Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:36.449Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:37.491Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:37.492Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:38.538Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:38.539Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:39.576Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:39.576Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:40.496Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:40.496Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:41.522Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:41.522Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:42.555Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:42.556Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:43.591Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:43.593Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:44.626Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:44.627Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:45.659Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:45.660Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:46.686Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:46.687Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:47.714Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:47.714Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:48.755Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:48.756Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:49.683Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:49.684Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:50.710Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:50.710Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:51.742Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:51.742Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:52.663Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:52.664Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:53.685Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:53.688Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:54.710Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:54.710Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:55.746Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:55.747Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:56.569Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:56.570Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:56.653Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-2] Metadata update failed
+config-client-1  | 
+config-client-1  | org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+config-client-1  | 
+config-client-1  | 2025-07-12T09:21:57.587Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:57.587Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:58.613Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:58.613Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:21:59.638Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:21:59.638Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:00.559Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:00.560Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:01.488Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:01.488Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:02.426Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:02.427Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:03.451Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:03.451Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:04.482Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:04.484Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:05.511Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:05.511Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:06.544Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:06.545Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:07.564Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:07.565Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:08.592Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:08.592Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:09.535Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:09.536Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:10.563Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:10.563Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:11.583Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:11.583Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:12.602Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:12.603Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:13.648Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:13.649Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:14.673Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:14.674Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:15.704Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:15.704Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:16.734Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:16.734Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:17.765Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:17.765Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:18.798Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:18.798Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:19.828Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:19.829Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:20.762Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:20.762Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:21.696Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:21.700Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:22.731Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:22.732Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:23.772Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:23.776Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:24.608Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:24.609Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:25.643Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:25.644Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:26.652Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:26.652Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-2] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:26.654Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-2 unregistered
+config-client-1  | 2025-07-12T09:22:26.654Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-2] Metadata update failed
+config-client-1  | 
+config-client-1  | org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+config-client-1  | 
+config-client-1  | 2025-07-12T09:22:26.655Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-2] Timed out 1 remaining operation(s) during close.
+config-client-1  | 2025-07-12T09:22:26.657Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+config-client-1  | 2025-07-12T09:22:26.657Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+config-client-1  | 2025-07-12T09:22:26.657Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+config-client-1  | 2025-07-12T09:22:26.658Z ERROR 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.s.cloud.stream.binding.BindingService  : Failed to create consumer binding; retrying in 30 seconds
+config-client-1  | 
+config-client-1  | org.springframework.cloud.stream.provisioning.ProvisioningException: Provisioning exception encountered for ConfigurationUpdated
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopic(KafkaTopicProvisioner.java:419) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.doProvisionConsumerDestination(KafkaTopicProvisioner.java:288) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.provisionConsumerDestination(KafkaTopicProvisioner.java:253) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.provisionConsumerDestination(KafkaTopicProvisioner.java:98) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder.doBindConsumer(AbstractMessageChannelBinder.java:537) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder.doBindConsumer(AbstractMessageChannelBinder.java:103) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractBinder.bindConsumer(AbstractBinder.java:144) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binding.BindingService.lambda$rescheduleConsumerBinding$1(BindingService.java:213) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+config-client-1  | 	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+config-client-1  | Caused by: java.util.concurrent.TimeoutException: null
+config-client-1  | 	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:2006) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2141) ~[na:na]
+config-client-1  | 	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:183) ~[kafka-clients-3.9.1.jar!/:na]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopicAndPartitions(KafkaTopicProvisioner.java:455) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopicIfNecessary(KafkaTopicProvisioner.java:429) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopic(KafkaTopicProvisioner.java:406) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	... 14 common frames omitted
+config-client-1  | 
+config-client-1  | 2025-07-12T09:22:56.670Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+config-client-1  | 	auto.include.jmx.reporter = true
+config-client-1  | 	bootstrap.controllers = []
+config-client-1  | 	bootstrap.servers = [localhost:9092]
+config-client-1  | 	client.dns.lookup = use_all_dns_ips
+config-client-1  | 	client.id = 
+config-client-1  | 	connections.max.idle.ms = 300000
+config-client-1  | 	default.api.timeout.ms = 60000
+config-client-1  | 	enable.metrics.push = true
+config-client-1  | 	metadata.max.age.ms = 300000
+config-client-1  | 	metadata.recovery.strategy = none
+config-client-1  | 	metric.reporters = []
+config-client-1  | 	metrics.num.samples = 2
+config-client-1  | 	metrics.recording.level = INFO
+config-client-1  | 	metrics.sample.window.ms = 30000
+config-client-1  | 	receive.buffer.bytes = 65536
+config-client-1  | 	reconnect.backoff.max.ms = 1000
+config-client-1  | 	reconnect.backoff.ms = 50
+config-client-1  | 	request.timeout.ms = 30000
+config-client-1  | 	retries = 2147483647
+config-client-1  | 	retry.backoff.max.ms = 1000
+config-client-1  | 	retry.backoff.ms = 100
+config-client-1  | 	sasl.client.callback.handler.class = null
+config-client-1  | 	sasl.jaas.config = null
+config-client-1  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+config-client-1  | 	sasl.kerberos.min.time.before.relogin = 60000
+config-client-1  | 	sasl.kerberos.service.name = null
+config-client-1  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+config-client-1  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+config-client-1  | 	sasl.login.callback.handler.class = null
+config-client-1  | 	sasl.login.class = null
+config-client-1  | 	sasl.login.connect.timeout.ms = null
+config-client-1  | 	sasl.login.read.timeout.ms = null
+config-client-1  | 	sasl.login.refresh.buffer.seconds = 300
+config-client-1  | 	sasl.login.refresh.min.period.seconds = 60
+config-client-1  | 	sasl.login.refresh.window.factor = 0.8
+config-client-1  | 	sasl.login.refresh.window.jitter = 0.05
+config-client-1  | 	sasl.login.retry.backoff.max.ms = 10000
+config-client-1  | 	sasl.login.retry.backoff.ms = 100
+config-client-1  | 	sasl.mechanism = GSSAPI
+config-client-1  | 	sasl.oauthbearer.clock.skew.seconds = 30
+config-client-1  | 	sasl.oauthbearer.expected.audience = null
+config-client-1  | 	sasl.oauthbearer.expected.issuer = null
+config-client-1  | 	sasl.oauthbearer.header.urlencode = false
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+config-client-1  | 	sasl.oauthbearer.jwks.endpoint.url = null
+config-client-1  | 	sasl.oauthbearer.scope.claim.name = scope
+config-client-1  | 	sasl.oauthbearer.sub.claim.name = sub
+config-client-1  | 	sasl.oauthbearer.token.endpoint.url = null
+config-client-1  | 	security.protocol = PLAINTEXT
+config-client-1  | 	security.providers = null
+config-client-1  | 	send.buffer.bytes = 131072
+config-client-1  | 	socket.connection.setup.timeout.max.ms = 30000
+config-client-1  | 	socket.connection.setup.timeout.ms = 10000
+config-client-1  | 	ssl.cipher.suites = null
+config-client-1  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+config-client-1  | 	ssl.endpoint.identification.algorithm = https
+config-client-1  | 	ssl.engine.factory.class = null
+config-client-1  | 	ssl.key.password = null
+config-client-1  | 	ssl.keymanager.algorithm = SunX509
+config-client-1  | 	ssl.keystore.certificate.chain = null
+config-client-1  | 	ssl.keystore.key = null
+config-client-1  | 	ssl.keystore.location = null
+config-client-1  | 	ssl.keystore.password = null
+config-client-1  | 	ssl.keystore.type = JKS
+config-client-1  | 	ssl.protocol = TLSv1.3
+config-client-1  | 	ssl.provider = null
+config-client-1  | 	ssl.secure.random.implementation = null
+config-client-1  | 	ssl.trustmanager.algorithm = PKIX
+config-client-1  | 	ssl.truststore.certificates = null
+config-client-1  | 	ssl.truststore.location = null
+config-client-1  | 	ssl.truststore.password = null
+config-client-1  | 	ssl.truststore.type = JKS
+config-client-1  | 
+config-client-1  | 2025-07-12T09:22:56.704Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+config-client-1  | 2025-07-12T09:22:56.704Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+config-client-1  | 2025-07-12T09:22:56.704Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752312176704
+config-client-1  | 2025-07-12T09:22:56.711Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:56.711Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:56.814Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:56.814Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:56.918Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:56.919Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:57.132Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:57.133Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:57.548Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:57.548Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:58.267Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:58.267Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:22:59.197Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:22:59.198Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:00.228Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:00.228Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:01.251Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:01.252Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:02.173Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:02.173Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:03.220Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:03.221Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:04.255Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:04.256Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:05.282Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:05.282Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:06.330Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:06.331Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:07.164Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:07.164Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:08.196Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:08.196Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:09.021Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:09.023Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:09.953Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:09.953Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:10.885Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:10.886Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:11.916Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:11.916Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:12.942Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:12.943Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:13.969Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:13.969Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:15.005Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:15.006Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:16.033Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:16.033Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:17.059Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:17.060Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:17.885Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:17.885Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:18.811Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:18.811Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:19.829Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:19.829Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:20.857Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:20.858Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:21.891Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:21.891Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:22.819Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:22.820Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:23.859Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:23.862Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:24.786Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:24.787Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:25.823Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:25.824Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:26.709Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-3] Metadata update failed
+config-client-1  | 
+config-client-1  | org.apache.kafka.common.errors.TimeoutException: Timed out waiting for a node assignment. Call: fetchMetadata
+config-client-1  | 
+config-client-1  | 2025-07-12T09:23:26.814Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:26.815Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:27.742Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:27.742Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:28.775Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:28.775Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:29.709Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:29.709Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:30.635Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:30.635Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:31.577Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:31.577Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:32.497Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:32.497Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:33.529Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:33.532Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:34.561Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:34.562Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:35.583Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:35.584Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:36.620Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:36.620Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:37.546Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:37.546Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:38.574Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:38.574Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:39.493Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:39.494Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:40.522Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:40.522Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:41.554Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:41.554Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:42.580Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:42.581Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:43.612Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:43.613Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:44.647Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:44.647Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:45.679Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:45.680Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:46.713Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:46.714Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:47.641Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:47.643Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:48.471Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:48.471Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:49.496Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:49.496Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:50.520Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:50.521Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:51.448Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:51.448Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:52.477Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:52.477Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:53.510Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:53.511Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:54.542Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:54.543Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:55.569Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:55.569Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:56.495Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Node -1 disconnected.
+config-client-1  | 2025-07-12T09:23:56.495Z  WARN 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] org.apache.kafka.clients.NetworkClient   : [AdminClient clientId=adminclient-3] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+config-client-1  | 2025-07-12T09:23:56.723Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-3 unregistered
+config-client-1  | 2025-07-12T09:23:56.723Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] o.a.k.c.a.i.AdminMetadataManager         : [AdminClient clientId=adminclient-3] Metadata update failed
+config-client-1  | 
+config-client-1  | org.apache.kafka.common.errors.TimeoutException: The AdminClient thread has exited. Call: fetchMetadata
+config-client-1  | 
+config-client-1  | 2025-07-12T09:23:56.724Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] o.a.k.clients.admin.KafkaAdminClient     : [AdminClient clientId=adminclient-3] Timed out 1 remaining operation(s) during close.
+config-client-1  | 2025-07-12T09:23:56.727Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+config-client-1  | 2025-07-12T09:23:56.727Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+config-client-1  | 2025-07-12T09:23:56.727Z  INFO 1 --- [cloud-bus-config-server-client-kafka] [| adminclient-3] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+config-client-1  | 2025-07-12T09:23:56.728Z ERROR 1 --- [cloud-bus-config-server-client-kafka] [   scheduling-1] o.s.cloud.stream.binding.BindingService  : Failed to create consumer binding; retrying in 30 seconds
+config-client-1  | 
+config-client-1  | org.springframework.cloud.stream.provisioning.ProvisioningException: Provisioning exception encountered for ConfigurationUpdated
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopic(KafkaTopicProvisioner.java:419) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.doProvisionConsumerDestination(KafkaTopicProvisioner.java:288) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.provisionConsumerDestination(KafkaTopicProvisioner.java:253) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.provisionConsumerDestination(KafkaTopicProvisioner.java:98) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder.doBindConsumer(AbstractMessageChannelBinder.java:537) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder.doBindConsumer(AbstractMessageChannelBinder.java:103) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.AbstractBinder.bindConsumer(AbstractBinder.java:144) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binding.BindingService.lambda$rescheduleConsumerBinding$1(BindingService.java:213) ~[spring-cloud-stream-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.2.8.jar!/:6.2.8]
+config-client-1  | 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:309) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619) ~[na:na]
+config-client-1  | 	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+config-client-1  | Caused by: java.util.concurrent.TimeoutException: null
+config-client-1  | 	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:2006) ~[na:na]
+config-client-1  | 	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2141) ~[na:na]
+config-client-1  | 	at org.apache.kafka.common.internals.KafkaFutureImpl.get(KafkaFutureImpl.java:183) ~[kafka-clients-3.9.1.jar!/:na]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopicAndPartitions(KafkaTopicProvisioner.java:455) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopicIfNecessary(KafkaTopicProvisioner.java:429) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	at org.springframework.cloud.stream.binder.kafka.provisioning.KafkaTopicProvisioner.createTopic(KafkaTopicProvisioner.java:406) ~[spring-cloud-stream-binder-kafka-core-4.3.0.jar!/:4.3.0]
+config-client-1  | 	... 14 common frames omitted
+config-client-1  | 
