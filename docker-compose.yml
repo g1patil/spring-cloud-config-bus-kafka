@@ -26,3 +26,16 @@ services:
       VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
     cap_add:
       - IPC_LOCK
+
+  vault-agent:
+    image: hashicorp/vault:latest
+    depends_on:
+      - vault
+    environment:
+      VAULT_TOKEN: ${VAULT_TOKEN:-root}
+    volumes:
+      - ./vault-agent:/vault-agent
+    entrypoint: >
+      sh -c "echo $$VAULT_TOKEN > /tmp/vault-token && vault agent -config=/vault-agent/config.hcl"
+    cap_add:
+      - IPC_LOCK
